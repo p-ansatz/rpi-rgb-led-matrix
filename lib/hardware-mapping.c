@@ -27,6 +27,37 @@ struct HardwareMapping matrix_hardware_mappings[] = {
    * by the adapter PCBs.
    */
   {
+    .name          = "applicon",
+
+    .output_enable = GPIO_BIT(18),
+    .clock         = GPIO_BIT(17),
+    .strobe        = GPIO_BIT(4),
+
+    .a             = GPIO_BIT(22),
+    .b             = GPIO_BIT(23),
+    .c             = GPIO_BIT(24),
+    .d             = GPIO_BIT(25),
+    .e             = GPIO_BIT(26),  /* Needs manual wiring, see README.md */
+
+    /* Chain 0 */
+    .p0_r1         = GPIO_BIT(11),
+    .p0_g1         = GPIO_BIT(27),
+    .p0_b1         = GPIO_BIT(7),
+    .p0_r2         = GPIO_BIT(8),
+    .p0_g2         = GPIO_BIT(9),
+    .p0_b2         = GPIO_BIT(10),
+
+    /* Chain 1 */
+    .p1_r1         = GPIO_BIT(12),
+    .p1_g1         = GPIO_BIT(5),
+    .p1_b1         = GPIO_BIT(6),
+    .p1_r2         = GPIO_BIT(19),
+    .p1_g2         = GPIO_BIT(13),
+    .p1_b2         = GPIO_BIT(20),
+    
+  },
+
+  {
     .name          = "regular",
 
     .output_enable = GPIO_BIT(18),
